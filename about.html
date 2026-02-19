@@ -1,41 +1,273 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>About Us - TechNova</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us — TechNova Systems</title>
+    <meta
+      name="description"
+      content="Learn about TechNova Systems — Ghana's trusted electronics partner since 2020."
+    />
 
-<header>
-    <img src="logo.jpg" alt="Logo"> 
-    
-    <h1>About TechNova Systems</h1>
-</header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="loader">
+      <div class="page-loader__spinner"></div>
+    </div>
 
-<div class="container">
-    <h2>Our History</h2>
-    <p>Founded in 2020 in Accra, Ghana, TechNova Systems started as a small electronics shop and has grown into a trusted brand nationwide.</p>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <div class="nav__logo-icon">TN</div>
+          TechNova
+        </a>
+        <div class="nav__links" id="navLinks">
+          <a href="index.html" class="nav__link">Home</a>
+          <a href="about.html" class="nav__link active">About</a>
+          <a href="products.html" class="nav__link">Products</a>
+          <a href="testimonials.html" class="nav__link">Testimonials</a>
+          <a href="contact.html" class="nav__link">Contact</a>
+          <div class="nav__cta">
+            <a href="products.html" class="btn btn--primary btn--sm"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <div class="nav__toggle" id="navToggle" onclick="toggleNav()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
 
-    <h2>Why Choose Us?</h2>
-    <ul>
-        <li>Affordable Prices</li>
-        <li>Quality Products</li>
-        <li>Excellent Customer Service</li>
-        <li>Fast Delivery</li>
-    </ul>
-</div>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero__bg">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__grid-lines"></div>
+      </div>
+      <div class="page-hero__content container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep">/</span>
+          <span>About</span>
+        </div>
+        <h1>Our <span class="text-gradient">Story</span></h1>
+        <p>
+          From a small Accra storefront to Ghana's most trusted tech brand —
+          here's how we got here.
+        </p>
+      </div>
+    </section>
 
-<footer>
-    © 2026 TechNova Systems Ghana Ltd
-</footer>
+    <!-- Story Section -->
+    <section class="section">
+      <div class="container">
+        <div class="about-story">
+          <div class="about-story__visual reveal-left">
+            <span class="about-story__year">2020</span>
+          </div>
+          <div class="about-story__content reveal-right">
+            <span class="label">Our Journey</span>
+            <h2>
+              Started Small,<br /><span class="text-gradient"
+                >Dreaming Big</span
+              >
+            </h2>
+            <p>
+              Founded in 2020 in the heart of Accra, TechNova Systems began as a
+              small electronics shop with a bold vision — to make premium
+              technology accessible to every Ghanaian.
+            </p>
+            <p>
+              Today, we've grown into one of the most trusted electronics brands
+              in the country, serving thousands of customers across all 16
+              regions with genuine products and exceptional service.
+            </p>
+            <p>
+              Our growth isn't just about numbers. It's about the student who
+              got their first laptop, the business owner who upgraded their
+              setup, and the family that connected through technology.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</body>
+    <!-- Values Section -->
+    <section class="section" style="background: var(--color-bg-elevated)">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Our Values</span>
+          <h2>
+            What Drives <span class="text-gradient">Everything We Do</span>
+          </h2>
+          <p>
+            These aren't just words on a wall — they're the principles behind
+            every decision we make.
+          </p>
+        </div>
+
+        <div class="values-grid stagger">
+          <div class="value-item">
+            <div class="value-item__number">01</div>
+            <div>
+              <h4>Affordable Prices</h4>
+              <p>
+                Premium technology shouldn't break the bank. We negotiate the
+                best deals so you don't have to.
+              </p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-item__number">02</div>
+            <div>
+              <h4>Verified Quality</h4>
+              <p>
+                Every product goes through our quality assurance process. No
+                counterfeits, no compromises.
+              </p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-item__number">03</div>
+            <div>
+              <h4>Exceptional Service</h4>
+              <p>
+                From product advice to after-sales support, our team goes above
+                and beyond for every customer.
+              </p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-item__number">04</div>
+            <div>
+              <h4>Fast Delivery</h4>
+              <p>
+                We understand urgency. Our logistics network ensures your
+                products arrive quickly and safely.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section">
+      <div class="container">
+        <div
+          class="hero__stats reveal"
+          style="border-top: none; margin-top: 0; padding-top: 0"
+        >
+          <div class="hero__stat">
+            <div class="hero__stat-value counter" data-target="5000">0</div>
+            <div class="hero__stat-label">Customers Served</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value counter" data-target="16">0</div>
+            <div class="hero__stat-label">Regions Covered</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value counter" data-target="200">0</div>
+            <div class="hero__stat-label">Products Available</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value counter" data-target="98">0</div>
+            <div class="hero__stat-label">% Customer Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section section">
+      <div class="container">
+        <div class="cta-section__inner reveal-scale">
+          <h2>Want to <span class="text-gradient">Work With Us</span>?</h2>
+          <p>
+            Whether you're a customer, partner, or supplier — we'd love to
+            connect.
+          </p>
+          <div>
+            <a href="contact.html" class="btn btn--primary btn--lg">
+              Get in Touch
+              <span class="btn__icon">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="nav__logo">
+              <div class="nav__logo-icon">TN</div>
+              TechNova
+            </a>
+            <p>
+              Ghana's premium destination for quality electronics. Technology
+              made accessible since 2020.
+            </p>
+          </div>
+          <div>
+            <h4 class="footer__heading">Navigation</h4>
+            <div class="footer__links">
+              <a href="index.html" class="footer__link">Home</a>
+              <a href="about.html" class="footer__link">About Us</a>
+              <a href="products.html" class="footer__link">Products</a>
+              <a href="testimonials.html" class="footer__link">Testimonials</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer__heading">Categories</h4>
+            <div class="footer__links">
+              <a href="products.html" class="footer__link">Laptops</a>
+              <a href="products.html" class="footer__link">Accessories</a>
+              <a href="products.html" class="footer__link">Displays</a>
+              <a href="products.html" class="footer__link">Networking</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer__heading">Contact</h4>
+            <div class="footer__links">
+              <a href="contact.html" class="footer__link">Get in Touch</a>
+              <span class="footer__link">Accra, Ghana</span>
+              <span class="footer__link">info@technova.com.gh</span>
+              <span class="footer__link">+233 20 000 0000</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span
+            >&copy; 2026 TechNova Systems Ghana Ltd. All rights reserved.</span
+          >
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer__social" aria-label="Facebook">f</a>
+            <a href="#" class="footer__social" aria-label="Instagram">◎</a>
+            <a href="#" class="footer__social" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

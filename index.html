@@ -1,44 +1,327 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>TechNova Systems Ghana Ltd</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechNova Systems — Premium Technology, Made Accessible</title>
+    <meta
+      name="description"
+      content="Ghana's most trusted electronics partner. Premium laptops, accessories, and tech solutions at accessible prices."
+    />
 
-<header>
-    <img src="logo.jpg" alt="Logo">
-    <h1>TechNova Systems Ghana Ltd</h1>
-    <p><strong>Technology Made Affordable</strong></p>
-</header>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="loader">
+      <div class="page-loader__spinner"></div>
+    </div>
 
-<div class="container">
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <div class="nav__logo-icon">TN</div>
+          TechNova
+        </a>
 
-<div class="hero">
-    <h2>Welcome to TechNova Systems</h2>
-    <p>Your trusted electronics partner in Ghana.</p>
-    <button onclick="location.href='products.html'">Shop Now</button>
-</div>
+        <div class="nav__links" id="navLinks">
+          <a href="index.html" class="nav__link active">Home</a>
+          <a href="about.html" class="nav__link">About</a>
+          <a href="products.html" class="nav__link">Products</a>
+          <a href="testimonials.html" class="nav__link">Testimonials</a>
+          <a href="contact.html" class="nav__link">Contact</a>
+          <div class="nav__cta">
+            <a href="products.html" class="btn btn--primary btn--sm"
+              >Shop Now</a
+            >
+          </div>
+        </div>
 
-<h3>Mission</h3>
-<p>To provide affordable and high-quality electronics across Ghana.</p>
+        <div class="nav__toggle" id="navToggle" onclick="toggleNav()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
 
-<h3>Vision</h3>
-<p>To become Ghana’s most trusted electronics retailer.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__bg">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+        <div class="hero__grid-lines"></div>
+      </div>
 
-</div>
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Ghana's #1 Tech Partner
+        </div>
 
-<footer>
-    © 2026 TechNova Systems Ghana Ltd
-</footer>
+        <h1>
+          Premium Technology,<br />
+          <span class="text-gradient">Made Accessible.</span>
+        </h1>
 
-</body>
+        <p class="hero__subtitle">
+          We bring world-class electronics to Ghana at prices that make sense.
+          Quality you can trust, service you'll remember.
+        </p>
+
+        <div class="hero__actions">
+          <a href="products.html" class="btn btn--primary btn--lg">
+            Explore Products
+            <span class="btn__icon">→</span>
+          </a>
+          <a href="about.html" class="btn btn--secondary btn--lg">
+            Our Story
+          </a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <div class="hero__stat-value counter" data-target="5000">0</div>
+            <div class="hero__stat-label">Happy Customers</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value counter" data-target="200">0</div>
+            <div class="hero__stat-label">Products Available</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value counter" data-target="6">0</div>
+            <div class="hero__stat-label">Years in Business</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll">
+        Scroll
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="section" style="padding: var(--space-10) 0">
+      <div class="container reveal">
+        <div class="trust-bar">
+          <span class="trust-bar__item">HP</span>
+          <span class="trust-bar__item">Dell</span>
+          <span class="trust-bar__item">Samsung</span>
+          <span class="trust-bar__item">Lenovo</span>
+          <span class="trust-bar__item">Logitech</span>
+          <span class="trust-bar__item">Canon</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission / Vision / Values -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Why TechNova</span>
+          <h2>
+            Built on Purpose,<br /><span class="text-gradient"
+              >Driven by Values</span
+            >
+          </h2>
+          <p>
+            More than a retailer — we're on a mission to democratize access to
+            premium technology across Ghana.
+          </p>
+        </div>
+
+        <div class="feature-grid stagger">
+          <div class="feature-card">
+            <div class="feature-card__icon">🎯</div>
+            <h3>Our Mission</h3>
+            <p>
+              To provide affordable, high-quality electronics to every corner of
+              Ghana — bridging the digital divide with products you can trust.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">🔭</div>
+            <h3>Our Vision</h3>
+            <p>
+              To become Ghana's most trusted and beloved electronics brand —
+              setting the standard for quality, service, and accessibility in
+              West Africa.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">⚡</div>
+            <h3>Our Promise</h3>
+            <p>
+              Every product we sell is verified for quality. Every customer gets
+              premium support. Every price is fair. No exceptions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Preview -->
+    <section class="section" style="background: var(--color-bg-elevated)">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Featured</span>
+          <h2>Popular <span class="text-gradient">Right Now</span></h2>
+          <p>Hand-picked selections from our most loved categories.</p>
+        </div>
+
+        <div class="product-grid stagger">
+          <div class="product-card">
+            <div class="product-card__image">
+              <img src="products (6).jpg" alt="HP Laptop 15 inch" />
+              <span class="product-card__badge">Bestseller</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__category">Laptops</div>
+              <h3>HP Laptop 15"</h3>
+              <div class="product-card__footer">
+                <div class="product-card__price">GHS 5,200</div>
+                <button class="product-card__action" aria-label="Add to cart">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card__image">
+              <img src="products (2).jpg" alt="Dell Inspiron" />
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__category">Laptops</div>
+              <h3>Dell Inspiron</h3>
+              <div class="product-card__footer">
+                <div class="product-card__price">GHS 4,800</div>
+                <button class="product-card__action" aria-label="Add to cart">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card__image">
+              <img src="products (10).jpg" alt="Samsung Monitor" />
+              <span class="product-card__badge">Popular</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__category">Displays</div>
+              <h3>Samsung Monitor</h3>
+              <div class="product-card__footer">
+                <div class="product-card__price">GHS 1,200</div>
+                <button class="product-card__action" aria-label="Add to cart">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: var(--space-10)">
+          <a href="products.html" class="btn btn--secondary">
+            View All Products
+            <span class="btn__icon">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section">
+      <div class="container">
+        <div class="cta-section__inner reveal-scale">
+          <h2>Ready to <span class="text-gradient">Upgrade</span>?</h2>
+          <p>
+            Browse our complete catalog of premium electronics and find exactly
+            what you need.
+          </p>
+          <div>
+            <a href="products.html" class="btn btn--primary btn--lg">
+              Shop Now
+              <span class="btn__icon">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="nav__logo">
+              <div class="nav__logo-icon">TN</div>
+              TechNova
+            </a>
+            <p>
+              Ghana's premium destination for quality electronics. Technology
+              made accessible since 2020.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="footer__heading">Navigation</h4>
+            <div class="footer__links">
+              <a href="index.html" class="footer__link">Home</a>
+              <a href="about.html" class="footer__link">About Us</a>
+              <a href="products.html" class="footer__link">Products</a>
+              <a href="testimonials.html" class="footer__link">Testimonials</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer__heading">Categories</h4>
+            <div class="footer__links">
+              <a href="products.html" class="footer__link">Laptops</a>
+              <a href="products.html" class="footer__link">Accessories</a>
+              <a href="products.html" class="footer__link">Displays</a>
+              <a href="products.html" class="footer__link">Networking</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer__heading">Contact</h4>
+            <div class="footer__links">
+              <a href="contact.html" class="footer__link">Get in Touch</a>
+              <span class="footer__link">Accra, Ghana</span>
+              <span class="footer__link">info@technova.com.gh</span>
+              <span class="footer__link">+233 20 000 0000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span
+            >&copy; 2026 TechNova Systems Ghana Ltd. All rights reserved.</span
+          >
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer__social" aria-label="Facebook">f</a>
+            <a href="#" class="footer__social" aria-label="Instagram">◎</a>
+            <a href="#" class="footer__social" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

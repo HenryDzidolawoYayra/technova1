@@ -1,69 +1,293 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Testimonials - TechNova</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials — TechNova Systems</title>
+    <meta
+      name="description"
+      content="See what our customers say about TechNova Systems — real reviews from real people across Ghana."
+    />
 
-<header>
-    <img src="logo.jpg" alt="Logo">
-    <h1>Customer Testimonials</h1>
-    <p><strong>What Our Clients Say About Us</strong></p>
-</header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">Contact</a>
-</nav>
-
-<div class="container">
-
-<h2 style="text-align:center;">Our Happy Customers</h2>
-
-<div class="product-grid">
-
-    <div class="product-card">
-        <h3>Kwame – Accra</h3>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>"TechNova offers the best laptops at affordable prices. I highly recommend them!"</p>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="loader">
+      <div class="page-loader__spinner"></div>
     </div>
 
-    <div class="product-card">
-        <h3>Ama – Cape Coast</h3>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>"Fast delivery and excellent customer service. Very reliable company."</p>
-    </div>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <div class="nav__logo-icon">TN</div>
+          TechNova
+        </a>
+        <div class="nav__links" id="navLinks">
+          <a href="index.html" class="nav__link">Home</a>
+          <a href="about.html" class="nav__link">About</a>
+          <a href="products.html" class="nav__link">Products</a>
+          <a href="testimonials.html" class="nav__link active">Testimonials</a>
+          <a href="contact.html" class="nav__link">Contact</a>
+          <div class="nav__cta">
+            <a href="products.html" class="btn btn--primary btn--sm"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <div class="nav__toggle" id="navToggle" onclick="toggleNav()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
 
-    <div class="product-card">
-        <h3>Kofi – Kumasi</h3>
-        <p>⭐⭐⭐⭐</p>
-        <p>"Good quality products and friendly staff. I will definitely buy again."</p>
-    </div>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero__bg">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__grid-lines"></div>
+      </div>
+      <div class="page-hero__content container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep">/</span>
+          <span>Testimonials</span>
+        </div>
+        <h1>What Our Customers <span class="text-gradient">Say</span></h1>
+        <p>
+          Real stories from real people. See why thousands of Ghanaians trust
+          TechNova for their technology needs.
+        </p>
+      </div>
+    </section>
 
-    <div class="product-card">
-        <h3>Akosua – Takoradi</h3>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>"Professional service and genuine electronics. Worth every cedi."</p>
-    </div>
+    <!-- Testimonials Section -->
+    <section class="section">
+      <div class="container">
+        <!-- Overall Rating -->
+        <div class="section-header reveal">
+          <span class="label">Customer Reviews</span>
+          <h2>Trusted by <span class="text-gradient">Thousands</span></h2>
+          <p>
+            Our customers rate us 4.8 out of 5 stars on average. Here's what
+            they have to say.
+          </p>
+        </div>
 
-</div>
+        <div class="testimonial-grid stagger">
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+            </div>
+            <p class="testimonial-card__text">
+              TechNova offers the best laptops at affordable prices. The quality
+              is outstanding and the customer service is top-notch. I highly
+              recommend them to anyone looking for genuine electronics.
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">K</div>
+              <div>
+                <div class="testimonial-card__name">Kwame Asante</div>
+                <div class="testimonial-card__location">
+                  Accra, Greater Accra
+                </div>
+              </div>
+            </div>
+          </div>
 
-<h3 style="margin-top:40px;">Visit Our Technology Partner</h3>
-<p>
-    <a href="https://www.hp.com" target="_blank">
-        Click here to visit HP Official Website
-    </a>
-</p>
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+            </div>
+            <p class="testimonial-card__text">
+              Fast delivery and excellent customer service. I ordered a Dell
+              laptop and it arrived within 24 hours in perfect condition. Very
+              reliable company — they've earned a loyal customer.
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">A</div>
+              <div>
+                <div class="testimonial-card__name">Ama Mensah</div>
+                <div class="testimonial-card__location">
+                  Cape Coast, Central Region
+                </div>
+              </div>
+            </div>
+          </div>
 
-</div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star--empty">★</span>
+            </div>
+            <p class="testimonial-card__text">
+              Good quality products and friendly staff. The wireless mouse I
+              bought works perfectly and the price was very fair. I will
+              definitely buy again from TechNova.
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">K</div>
+              <div>
+                <div class="testimonial-card__name">Kofi Owusu</div>
+                <div class="testimonial-card__location">
+                  Kumasi, Ashanti Region
+                </div>
+              </div>
+            </div>
+          </div>
 
-<footer>
-    © 2026 TechNova Systems Ghana Ltd
-</footer>
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+              <span class="testimonial-card__star">★</span>
+            </div>
+            <p class="testimonial-card__text">
+              Professional service and genuine electronics. Worth every cedi. I
+              bought a monitor for my home office setup and the image quality is
+              amazing. TechNova is the real deal.
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">A</div>
+              <div>
+                <div class="testimonial-card__name">Akosua Boateng</div>
+                <div class="testimonial-card__location">
+                  Takoradi, Western Region
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</body>
+    <!-- Partners Section -->
+    <section class="section" style="background: var(--color-bg-elevated)">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Our Partners</span>
+          <h2>Powered by <span class="text-gradient">Global Brands</span></h2>
+          <p>
+            We partner with the world's leading technology companies to bring
+            you authentic products.
+          </p>
+        </div>
+
+        <div
+          class="trust-bar reveal"
+          style="opacity: 0.6; padding: var(--space-6) 0"
+        >
+          <span class="trust-bar__item">HP</span>
+          <span class="trust-bar__item">Dell</span>
+          <span class="trust-bar__item">Samsung</span>
+          <span class="trust-bar__item">Lenovo</span>
+          <span class="trust-bar__item">Logitech</span>
+          <span class="trust-bar__item">Canon</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section section">
+      <div class="container">
+        <div class="cta-section__inner reveal-scale">
+          <h2>Join Our <span class="text-gradient">Happy Customers</span></h2>
+          <p>
+            Experience the TechNova difference for yourself. Browse our
+            collection and find your perfect tech.
+          </p>
+          <div>
+            <a href="products.html" class="btn btn--primary btn--lg">
+              Browse Products
+              <span class="btn__icon">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="nav__logo">
+              <div class="nav__logo-icon">TN</div>
+              TechNova
+            </a>
+            <p>
+              Ghana's premium destination for quality electronics. Technology
+              made accessible since 2020.
+            </p>
+          </div>
+          <div>
+            <h4 class="footer__heading">Navigation</h4>
+            <div class="footer__links">
+              <a href="index.html" class="footer__link">Home</a>
+              <a href="about.html" class="footer__link">About Us</a>
+              <a href="products.html" class="footer__link">Products</a>
+              <a href="testimonials.html" class="footer__link">Testimonials</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer__heading">Categories</h4>
+            <div class="footer__links">
+              <a href="products.html" class="footer__link">Laptops</a>
+              <a href="products.html" class="footer__link">Accessories</a>
+              <a href="products.html" class="footer__link">Displays</a>
+              <a href="products.html" class="footer__link">Networking</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer__heading">Contact</h4>
+            <div class="footer__links">
+              <a href="contact.html" class="footer__link">Get in Touch</a>
+              <span class="footer__link">Accra, Ghana</span>
+              <span class="footer__link">info@technova.com.gh</span>
+              <span class="footer__link">+233 20 000 0000</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span
+            >&copy; 2026 TechNova Systems Ghana Ltd. All rights reserved.</span
+          >
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer__social" aria-label="Facebook">f</a>
+            <a href="#" class="footer__social" aria-label="Instagram">◎</a>
+            <a href="#" class="footer__social" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

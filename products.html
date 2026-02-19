@@ -1,106 +1,338 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Products - TechNova</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products — TechNova Systems</title>
+    <meta
+      name="description"
+      content="Browse our complete catalog of premium electronics — laptops, accessories, displays, and more."
+    />
 
-<header>
-    <img src="logo.jpg" alt="Logo">
-    <h1>Our Products</h1>
-</header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="loader">
+      <div class="page-loader__spinner"></div>
+    </div>
 
-<div class="container">
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <div class="nav__logo-icon">TN</div>
+          TechNova
+        </a>
+        <div class="nav__links" id="navLinks">
+          <a href="index.html" class="nav__link">Home</a>
+          <a href="about.html" class="nav__link">About</a>
+          <a href="products.html" class="nav__link active">Products</a>
+          <a href="testimonials.html" class="nav__link">Testimonials</a>
+          <a href="contact.html" class="nav__link">Contact</a>
+          <div class="nav__cta">
+            <a href="products.html" class="btn btn--primary btn--sm"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <div class="nav__toggle" id="navToggle" onclick="toggleNav()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
 
-<h2 style="text-align:center;">Our Products</h2>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero__bg">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__grid-lines"></div>
+      </div>
+      <div class="page-hero__content container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep">/</span>
+          <span>Products</span>
+        </div>
+        <h1>Our <span class="text-gradient">Products</span></h1>
+        <p>
+          Premium electronics handpicked for quality, performance, and value.
+          Everything you need, nothing you don't.
+        </p>
+      </div>
+    </section>
 
-<div class="product-grid">
+    <!-- Products Section -->
+    <section class="section">
+      <div class="container">
+        <!-- Filter Bar -->
+        <div class="filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">
+            All Products
+          </button>
+          <button class="filter-btn" data-filter="laptops">Laptops</button>
+          <button class="filter-btn" data-filter="accessories">
+            Accessories
+          </button>
+          <button class="filter-btn" data-filter="displays">Displays</button>
+          <button class="filter-btn" data-filter="peripherals">
+            Peripherals
+          </button>
+          <button class="filter-btn" data-filter="networking">
+            Networking
+          </button>
+        </div>
 
-<div class="product-card">
-<img src="products (6).jpg">
-<h3>HP Laptop 15"</h3>
-<p class="price">GHS 5200</p>
-<button>Buy Now</button>
-</div>
+        <!-- Product Grid -->
+        <div class="product-grid stagger">
+          <div class="product-card" data-category="laptops">
+            <div class="product-card__image">
+              <img src="products (6).jpg" alt="HP Laptop 15 inch" />
+              <span class="product-card__badge">Bestseller</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__category">Laptops</div>
+              <h3>HP Laptop 15"</h3>
+              <div class="product-card__footer">
+                <div class="product-card__price">GHS 5,200</div>
+                <button class="product-card__action" aria-label="Add to cart">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div class="product-card">
-<img src="products (2).jpg">
-<h3>Dell Inspiron</h3>
-<p class="price">GHS 4800</p>
-<button>Buy Now</button>
-</div>
+          <div class="product-card" data-category="laptops">
+            <div class="product-card__image">
+              <img src="products (2).jpg" alt="Dell Inspiron" />
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__category">Laptops</div>
+              <h3>Dell Inspiron</h3>
+              <div class="product-card__footer">
+                <div class="product-card__price">GHS 4,800</div>
+                <button class="product-card__action" aria-label="Add to cart">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div class="product-card">
-<img src="products (3).jpg">
-<h3>Wireless Mouse</h3>
-<p class="price">GHS 120</p>
-<button>Buy Now</button>
-</div>
+          <div class="product-card" data-category="accessories">
+            <div class="product-card__image">
+              <img src="products (3).jpg" alt="Wireless Mouse" />
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__category">Accessories</div>
+              <h3>Wireless Mouse</h3>
+              <div class="product-card__footer">
+                <div class="product-card__price">GHS 120</div>
+                <button class="product-card__action" aria-label="Add to cart">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div class="product-card">
-<img src="products (8).jpg">
-<h3>Keyboard</h3>
-<p class="price">GHS 150</p>
-<button>Buy Now</button>
-</div>
+          <div class="product-card" data-category="peripherals">
+            <div class="product-card__image">
+              <img src="products (8).jpg" alt="Keyboard" />
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__category">Peripherals</div>
+              <h3>Keyboard</h3>
+              <div class="product-card__footer">
+                <div class="product-card__price">GHS 150</div>
+                <button class="product-card__action" aria-label="Add to cart">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div class="product-card">
-<img src="products (10).jpg">
-<h3>Samsung Monitor</h3>
-<p class="price">GHS 1200</p>
-<button>Buy Now</button>
-</div>
+          <div class="product-card" data-category="displays">
+            <div class="product-card__image">
+              <img src="products (10).jpg" alt="Samsung Monitor" />
+              <span class="product-card__badge">Popular</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__category">Displays</div>
+              <h3>Samsung Monitor</h3>
+              <div class="product-card__footer">
+                <div class="product-card__price">GHS 1,200</div>
+                <button class="product-card__action" aria-label="Add to cart">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div class="product-card">
-<img src="products (5).jpg">
-<h3>Printer</h3>
-<p class="price">GHS 900</p>
-<button>Buy Now</button>
-</div>
+          <div class="product-card" data-category="peripherals">
+            <div class="product-card__image">
+              <img src="products (5).jpg" alt="Printer" />
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__category">Peripherals</div>
+              <h3>Printer</h3>
+              <div class="product-card__footer">
+                <div class="product-card__price">GHS 900</div>
+                <button class="product-card__action" aria-label="Add to cart">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div class="product-card">
-<img src="products (7).jpg">
-<h3>Flash Drive 32GB</h3>
-<p class="price">GHS 45</p>
-<button>Buy Now</button>
-</div>
+          <div class="product-card" data-category="accessories">
+            <div class="product-card__image">
+              <img src="products (7).jpg" alt="Flash Drive 32GB" />
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__category">Accessories</div>
+              <h3>Flash Drive 32GB</h3>
+              <div class="product-card__footer">
+                <div class="product-card__price">GHS 45</div>
+                <button class="product-card__action" aria-label="Add to cart">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div class="product-card">
-<img src="products (9).jpg">
-<h3>WiFi Router</h3>
-<p class="price">GHS 350</p>
-<button>Buy Now</button>
-</div>
+          <div class="product-card" data-category="networking">
+            <div class="product-card__image">
+              <img src="products (9).jpg" alt="WiFi Router" />
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__category">Networking</div>
+              <h3>WiFi Router</h3>
+              <div class="product-card__footer">
+                <div class="product-card__price">GHS 350</div>
+                <button class="product-card__action" aria-label="Add to cart">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div class="product-card">
-<img src="products.jpg">
-<h3>External Hard Drive</h3>
-<p class="price">GHS 600</p>
-<button>Buy Now</button>
-</div>
+          <div class="product-card" data-category="accessories">
+            <div class="product-card__image">
+              <img src="products.jpg" alt="External Hard Drive" />
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__category">Accessories</div>
+              <h3>External Hard Drive</h3>
+              <div class="product-card__footer">
+                <div class="product-card__price">GHS 600</div>
+                <button class="product-card__action" aria-label="Add to cart">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
 
-<div class="product-card">
-<img src="products (4).jpg">
-<h3>Office Chair</h3>
-<p class="price">GHS 750</p>
-<button>Buy Now</button>
-</div>
+          <div class="product-card" data-category="peripherals">
+            <div class="product-card__image">
+              <img src="products (4).jpg" alt="Office Chair" />
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__category">Peripherals</div>
+              <h3>Office Chair</h3>
+              <div class="product-card__footer">
+                <div class="product-card__price">GHS 750</div>
+                <button class="product-card__action" aria-label="Add to cart">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</div>
-</div>
+    <!-- CTA -->
+    <section class="cta-section section">
+      <div class="container">
+        <div class="cta-section__inner reveal-scale">
+          <h2>Can't Find <span class="text-gradient">What You Need</span>?</h2>
+          <p>
+            We source products on request. Tell us what you're looking for and
+            we'll make it happen.
+          </p>
+          <div>
+            <a href="contact.html" class="btn btn--primary btn--lg">
+              Contact Us
+              <span class="btn__icon">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<footer>
-© 2026 TechNova Systems Ghana Ltd
-</footer>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="nav__logo">
+              <div class="nav__logo-icon">TN</div>
+              TechNova
+            </a>
+            <p>
+              Ghana's premium destination for quality electronics. Technology
+              made accessible since 2020.
+            </p>
+          </div>
+          <div>
+            <h4 class="footer__heading">Navigation</h4>
+            <div class="footer__links">
+              <a href="index.html" class="footer__link">Home</a>
+              <a href="about.html" class="footer__link">About Us</a>
+              <a href="products.html" class="footer__link">Products</a>
+              <a href="testimonials.html" class="footer__link">Testimonials</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer__heading">Categories</h4>
+            <div class="footer__links">
+              <a href="products.html" class="footer__link">Laptops</a>
+              <a href="products.html" class="footer__link">Accessories</a>
+              <a href="products.html" class="footer__link">Displays</a>
+              <a href="products.html" class="footer__link">Networking</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer__heading">Contact</h4>
+            <div class="footer__links">
+              <a href="contact.html" class="footer__link">Get in Touch</a>
+              <span class="footer__link">Accra, Ghana</span>
+              <span class="footer__link">info@technova.com.gh</span>
+              <span class="footer__link">+233 20 000 0000</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span
+            >&copy; 2026 TechNova Systems Ghana Ltd. All rights reserved.</span
+          >
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer__social" aria-label="Facebook">f</a>
+            <a href="#" class="footer__social" aria-label="Instagram">◎</a>
+            <a href="#" class="footer__social" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
